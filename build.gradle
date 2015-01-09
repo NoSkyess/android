@@ -1,0 +1,13 @@
+    repositories {
+        jcenter()
+        maven {
+            url 'file://'+project.rootDir+"/ShortcutBadger-aar"
+        }
+    }   dependencies {
+        compile 'me.leolin:ShortcutBadger:1.0.1@aar'
+    }   int badgeCount = 1;
+    try {
+        ShortcutBadger.setBadge(getApplicationContext(), badgeCount);
+    } catch (ShortcutBadgeException e) {
+        //handle the Exception
+    }
